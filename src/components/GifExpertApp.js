@@ -1,13 +1,20 @@
-/** @format */
-
-import React from 'react';
+import React, { useState } from 'react';
+import AddCategory from './AddCategory';
 
 const GifExpertApp = () => {
+  const [categories, setCategories] = useState(['DBZ', 'Naruto']);
+
   return (
-    <div>
-      <h2>GifExpertApp</h2>
+    <>
+      <h2>Gif Expert App</h2>
+      <AddCategory setCategories={setCategories} />
       <hr />
-    </div>
+      <ol>
+        {categories.map((category) => {
+          return <li key={category}>{category}</li>;
+        })}
+      </ol>
+    </>
   );
 };
 
