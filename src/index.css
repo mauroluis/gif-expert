@@ -1,1 +1,10 @@
-/** @format */
+body {
+  font-family: Helvetica, Arial;
+  padding: 60px;
+}
+
+input {
+  width: 100%;
+  font-size: 1.2rem;
+  color: gray;
+}
