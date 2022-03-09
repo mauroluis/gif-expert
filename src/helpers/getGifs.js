@@ -13,5 +13,6 @@ export const getGifs = async (category) => {
       url: img.images?.downsized_medium.url,
     };
   });
+  // retorna una promesa
   return gifs;
 };
