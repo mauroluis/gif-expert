@@ -9,8 +9,10 @@ const GifGrid = ({ category }) => {
   }, []);
 
   const getGifs = async () => {
-    const url =
-      'https://api.giphy.com/v1/gifs/search?q=dbsuper&limit=10&api_key=EsP0o7rSSB7uIOZQo2pSTT2UlBucdLLE';
+    //formatear para que se envie querie sin espacios y genere no errores
+    const url = `https://api.giphy.com/v1/gifs/search?q=${encodeURI(
+      category
+    )}&limit=10&api_key=EsP0o7rSSB7uIOZQo2pSTT2UlBucdLLE`;
     const resp = await fetch(url);
     const { data } = await resp.json();
     const gifs = data.map((img) => {
@@ -21,17 +23,18 @@ const GifGrid = ({ category }) => {
         url: img.images?.downsized_medium.url,
       };
     });
-    console.log(gifs);
     setImages(gifs);
   };
 
   return (
-    <div>
+    <>
       <h3>{category}</h3>
-      {images.map((img) => (
-        <GifGridItem key={img.id} {...img} />
-      ))}
-    </div>
+      <div className='card-grid'>
+        {images.map((img) => (
+          <GifGridItem key={img.id} {...img} />
+        ))}
+      </div>
+    </>
   );
 };
 

@@ -1,12 +1,12 @@
 import React from 'react';
+import '../index.css';
 
 const GifGridItem = ({ id, title, url }) => {
   return (
-    <div>
+    <div className='card'>
       <li key={id}>
-        {title}
-        <br />
-        <img src={url} alt={title} />
+        <img src={`${url}`} alt={`${title}`} />
+        <p>{title}</p>
         <hr />
       </li>
     </div>
