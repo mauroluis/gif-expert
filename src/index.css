@@ -9,6 +9,10 @@ input {
   color: gray;
 }
 
+h3 {
+  text-align: center;
+}
+
 .card-grid {
   display: flex;
   flex-direction: row;
