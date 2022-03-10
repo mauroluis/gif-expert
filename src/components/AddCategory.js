@@ -18,7 +18,12 @@ const AddCategory = ({ setCategories }) => {
 
   return (
     <form onSubmit={handleSub}>
-      <input type='text' value={inputValue} onChange={handleInput} />
+      <input
+        type='text'
+        placeholder='Escribe aquí tu búsqueda!'
+        value={inputValue}
+        onChange={handleInput}
+      />
     </form>
   );
 };
