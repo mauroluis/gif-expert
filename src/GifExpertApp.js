@@ -8,7 +8,9 @@ const GifExpertApp = () => {
   return (
     <>
       <h2>Busca Gifs!</h2>
-      <h3>Comienza buscando algo...</h3>
+      <h3 className='animate__animated animate__backInDown'>
+        Comienza buscando algo...
+      </h3>
       <AddCategory setCategories={setCategories} />
       <hr />
       <ol>
