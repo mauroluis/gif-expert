@@ -4,9 +4,17 @@
 
 A simple GIF searcher app which helps you finding GIFs using Giphy's API.
 
+## Go and try it out!
+
+ https://mauroluis.github.io/gif-expert/
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm i`
+
+Install modules from package.json
 
 ### `npm start`
 
